@@ -27,6 +27,7 @@ io.on("connection", (socket) => {
   socket.on("createRoom", (roomName, callback) => {
     const roomId = Date.now().toString();
     const room = {
+      id: roomId,
       name: roomName,
       users: new Map(),
       messages: [],
